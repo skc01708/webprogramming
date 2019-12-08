@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="kr" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <style>
+      #div1{
+        margin-left: 20px;
+        margin-top: 10px;
+      }
+      #div1 div{
+        font-size: 20px;
+        font-weight: 600;
+      }
+      div ul{
+        margin-left: ;
+      }
+      ul{
+        list-style:none;
+      }
+      li a{
+        float: left;
+        margin-right: 10px;
+      }
+      button{
+        font-size: 20px;
+      }
+      #result{
+        display: none;
+        position: absolute;
+        z-index: 10;
+        margin-left: -00px;
+        background-color: white;
+        width:300px;
+        height: 300px;
+        color: brown;
+        clear: left;
+      }
+      #result li a{
+        color: gray;
+        text-decoration:none;
+      }
+      #result li a:hover{
+        color: skyblue;
+        text-decoration:none;
+      }
+    </style>
+    <title></title>
+    <script src="http://code.jquery.com/jquery-3.4.1.js">
+    </script>
+    <script>
+      $(document).ready(function(){
+        $('.sbutton1').click(function(){
+          $('.slide').slideUp(100);
+        })
+        $('.sbutton2').click(function(){
+          $('.slide').slideDown(100);
+        })
+        $('.sbutton3').click(function(){
+          $('.slide').slideToggle(100);
+        })
+        $('.fbutton1').click(function(){
+          $('#result').fadeToggle(100);
+        })
+      })
+    </script>
+  </head>
+  <body>
+    <div id='div1'>
+      <button type="button" class="sbutton1">숨김</button>
+      <button type="button" class="sbutton2">보임</button>
+      <button type="button" class="sbutton3">토글</button><br>
+      <div>
+        개인적인 제 생각으로 고른 명곡이 많은 앨범을 골랐습니다.<br>
+
+      </div>
+    </div>
+    <div class='slide'>
+      <ul>
+        <li><a href="http://www.yes24.com/Product/Goods/78506484" target="_blank"><img src="img/limchangjumg15.jpg" height='200px' weight='200px'></a></li>
+        <li><a href="http://www.yes24.com/Product/Goods/5890235?scode=032&OzSrank=1" target="_blank"><img src="img/norazo5.jpg" height='200px' weight='200px'></a></li>
+        <li><a href="http://www.yes24.com/Product/Goods/25861218?scode=032&OzSrank=4" target="_blank"><img src="img/twice2.jpg" height='200px' weight='200px'></a></li>
+        <li><a href="http://www.yes24.com/Product/Goods/7955465?scode=032&OzSrank=6" target="_blank"><img src="img/noel4.jpg" height='200px' weight='200px'></a></li>
+        <li>
+          <button type='button' class="fbutton1">더보기</button>
+          <!--<img id="result" src="img/noel4.jpg" height='200px' weight='200px'>-->
+          <ul id="result"><br><br>
+            <li><a href="https://www.youtube.com/watch?v=WPL1YNLaTHM" target="_blank">노을-사랑이라면</a></li>
+            <li><a href="https://www.youtube.com/watch?v=vAVnb3Emm9Q" target="_blank">노을-전부너였다</a></li><br><br>
+            <li><a href="https://www.youtube.com/watch?v=xg4tLy1rX20" target="_blank">임창정 15집</a></li>
+            <li><a href="https://www.youtube.com/watch?v=DWCVPamUE2Y&list=PL55E2DA6DDC20C51C" target="_blank">노라조 5집</a></li><br>
+            <li><a href="https://www.youtube.com/watch?v=87rSLnElFHU" target="_blank">트와이스 2집</a></li>
+            <li><a href="https://www.youtube.com/watch?v=flLboTYD9pk&list=PLY9NqEHzzbvjYFuSFLYmRe1AlLSm2bSXa" target="_blank">노을 4집</a></li><br><br>
+            <li>나머지는 추가예정입니다.</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

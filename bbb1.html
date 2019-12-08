@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="kr" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <style>
+    .matryo{
+      display: non
+      color: #eee6c4;
+      font-size:30px;
+      font-weight: bold;
+    }
+    #c{
+        margin-left: 20px;
+        font-size: 30px;
+        font-weight: bold;
+    }
+    #matryo1{
+      z-index: 1;
+      position:absolute;
+    }
+    #matryo2{
+      z-index: -1;
+      position:absolute;
+      top: 10px;
+    }
+    #matryo3{
+      z-index: -2;
+      position:absolute;
+      top: 10px;
+    }
+    #matryo4{
+      z-index: -3;
+      position:absolute;
+      top: 10px;
+    }
+    </style>
+    <title></title>
+    <script src="http://code.jquery.com/jquery-3.4.1.js">
+    </script>
+    <script>
+      $(document).ready(function(){
+        $('#matryo1').click(function(){
+          $('#matryo2').animate({left:'+250px'},100);
+
+        })
+        $('#matryo2').click(function(){
+          $('#matryo3').animate({left:'+200px'},100);
+        })
+        $('#matryo3').click(function(){
+          $('#matryo4').animate({top:'+150px'},100);
+        })
+        $('.fbutton1').click(function(){
+          $('.matryo').fadeToggle(100);
+        })
+      })
+    </script>
+  </head>
+  <body>
+    <div>
+      <button type="button" class="fbutton1">보기</button><c id="c">마트료시카!</c><br>
+    </div>
+    <div class='matryo'>
+      <div id="matryo1">
+        <img src="img/a1.jpg" alt="?!" width="250px" height="250px">
+        <div id="matryo2">
+          <img src="img/a2.jpg" alt="?!" width="200px" height="200px">
+          <div id="matryo3">
+            <img src="img/a3.jpg" alt="?!" width="150px" height="150px">
+            <div id="matryo4">
+              <img src="img/a4.jpg" alt="?!" width="100px" height="100px">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

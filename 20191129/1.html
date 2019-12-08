@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="kr" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <style>
+      .bicimg{
+        display: none;
+        position: absolute;
+      }
+    </style>
+    <title></title>
+    <script src="http://code.jquery.com/jquery-3.4.1.js">
+    </script>
+    <script>
+      $(document).ready(function(){
+        $("#s1").click(function(){
+          $('#big1').fadeIn(1000);
+        });
+        $("#big1").click(function(){
+          $('#big1').fadeOut(1000);
+          });
+        });
+    </script>
+  </head>
+  <body>
+    <div>
+      <img src="img/a4.jpg" width="200" height="150"><br>
+      <img src="img/a4.jpg" id="s1" width="200" height="150"><br>
+      <img src="img/a4.jpg" id="big1" class="bicimg" width="400" height="300"><br>
+    </div>
+  </body>
+</html>

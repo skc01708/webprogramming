@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="kr" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <style>
+      .allhide{
+        display: none;
+        color: #eee6c4;
+        font-size:30px;
+        font-weight: bold;
+      }
+      body div d{
+        margin-left: 20px;
+        font-size: 30px;
+        font-weight: bold;
+      }
+      ul{
+        list-style:none;
+        padding: 0px;
+        margin-left: 20px;
+      }
+      .hide{
+        display: none;
+        color: #eeeeee;
+        font-size:25px;
+      }
+    </style>
+    <title></title>
+    <script src="http://code.jquery.com/jquery-3.4.1.js">
+    </script>
+    <script>
+      $(document).ready(function(){
+        $('#click1').click(function(){
+          $('#hide1').slideToggle(100);
+        })
+      $('#click2').click(function(){
+        $('#hide2').slideToggle(100);
+      })
+      $('#click3').click(function(){
+        $('#hide3').slideToggle(100);
+      })
+      $('#click4').click(function(){
+        $('#hide4').slideToggle(100);
+      })
+      $('#click5').click(function(){
+        $('#hide5').slideToggle(100);
+      })
+      $('.fbutton1').click(function(){
+        $('.allhide').fadeToggle(100);
+      })
+      })
+    </script>
+  </head>
+  <body>
+    <div>
+      <button type="button" class="fbutton1">보기</button><d>클릭하면 글자가 출력됩니다.</d><br>
+    </div>
+    <div class='allhide'>
+      <ul>
+        <li><a id='click1'>1. 이름</a><ul><li class="hide" id='hide1'>이정석</li></ul></li>
+        <li><a id='click2'>2. 나이</a><ul><li class="hide" id='hide2'>1997년 2월생</li></ul></li>
+        <li><a id='click3'>3. 거주지</a><ul><li class="hide" id='hide3'>서울시 금천구</li></ul></li>
+        <li><a id='click4'>4. 취미</a><ul><li class="hide" id='hide4'>음악감상, 조립하기</li></ul></li>
+        <li><a id='click5'>5. 할 일</a><ul><li class="hide" id='hide5'>방학 때 아르바이트를 안하면 작곡 프로그램 배우기</li></ul></li>
+      </ul>
+    </div>
+  </body>
+  </html>
